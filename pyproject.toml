@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "recon"
+version = "0.1.0"
+description = "Double-entry ledger reconciliation over synthetic transactions"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Aditya Singh Rathore", email = "adityasinh0707@gmail.com" }]
+keywords = ["reconciliation", "double-entry", "ledger", "fintech", "duckdb", "pydantic"]
+dependencies = [
+    "pydantic==2.9.2",
+    "duckdb==1.1.3",
+    "pandas==2.2.3",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest==8.3.3",
+    "ruff==0.6.9",
+]
+
+[project.scripts]
+recon = "recon.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "W", "C4", "SIM"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = "-q"

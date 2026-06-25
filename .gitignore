@@ -1,0 +1,21 @@
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Python caches
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+build/
+dist/
+
+# Generated raw synthetic data (reproducible via `make data`)
+data/
+
+# OS noise
+.DS_Store
+
+# NOTE: the small sample audit report under reports/ IS committed on purpose.
