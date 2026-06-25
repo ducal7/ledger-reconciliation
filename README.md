@@ -1,5 +1,8 @@
 # Ledger Reconciliation
 
+[![CI](https://github.com/ducal7/ledger-reconciliation/actions/workflows/ci.yml/badge.svg)](https://github.com/ducal7/ledger-reconciliation/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE) [![Python](https://img.shields.io/badge/python-3.11%2B-blue.svg)](https://www.python.org/)
+
+
 Double-entry ledger reconciliation over **synthetic** financial transactions, built as a
 portfolio project for data analysis / data engineering work in fintech.
 
